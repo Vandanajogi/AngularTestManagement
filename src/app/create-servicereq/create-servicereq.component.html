@@ -1,0 +1,153 @@
+
+<div class="col-md-9 offset-md-1"  >
+    <h2> Create New Service Request </h2>
+    
+    <form  (ngSubmit) = "onSubmit()" name="myform">
+    <div class="row g-3 needs-validation" >
+        <div class="col-md-6">
+            <label>Select Service</label>
+            
+                <select class="form-select" id="service"   [(ngModel)] = "serviceRequest.service" name = "service" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Smoke Test 1</option>
+                    <option>Smoke Test 2</option>
+                    <option>Smoke Test 3</option>
+                    <option>Smoke Test 4</option>
+                  </select>
+        </div>
+        <div class="col-md-6">
+            <label> Select Service Level</label>
+                <select class="form-select" id = "selectServiceLevel"
+                [(ngModel)] = "serviceRequest.selectServiceLevel" name = "selectServiceLevel" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Tier 1</option>
+                    <option>Tier 2</option>
+                    <option>Tier 3</option>
+                    <option>Tier 4</option>
+                    <option>Tier 5</option>
+                  </select>
+        </div>
+        <div class="col-md-6">
+            <label> Priority</label>
+           
+                <select class="form-select" id = "priority"
+                [(ngModel)] = "serviceRequest.priority" name = "priority" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                  </select>
+        </div>
+    
+        <div class="col-md-6">
+            <label> Title</label>
+            <input type="text" class ="form-control" id = "title"
+                [(ngModel)] = "serviceRequest.title" name = "title" #variable="ngModel" ngModel>
+                <div *ngIf="variable.touched && variable.invalid" class="alert alert-danger">The name is required.</div>
+        </div>
+        <div class="col-md-6">
+            <label> Description</label>
+            <input type="text" class ="form-control" id = "description"
+                [(ngModel)] = "serviceRequest.description" name = "description" required>
+        </div>
+        <div class="col-md-6">
+            <label> ExpectedBy</label>
+            <input type="text" class="fas fa-calendar input-prefix"   placeholder="yyyy-mm-dd"  class ="form-control" id = "expectedBy"
+                [(ngModel)] = "serviceRequest.expectedBy" name = "expectedBy">
+  
+        </div>
+       
+        <div class="form-group">
+           <h3> Environmental Details</h3>
+                
+        </div>
+        <div class="p-3 mb-2 bg-warning row g-3 needs-validation">
+        <div class="col-md-6">
+            <label> OS Version</label>
+           
+                <select class="form-select" id = "osVersion"
+                [(ngModel)] = "serviceRequest.osVersion" name = "osVersion" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Windows 7</option>
+                    <option>Windows 8</option>
+                    <option>Windows 10</option>
+                    <option>Windows 11</option>
+                  </select>
+        </div>
+
+        <div class="col-md-6">
+            <label> FW Version</label>
+          
+                <select class="form-select" id = "fwVersion"
+                [(ngModel)] = "serviceRequest.fwVersion" name = "fwVersion" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>10.0.1.2</option>
+                    <option>10.0.2.1</option>
+                    <option>10.0.3.1</option>
+                    <option>10.0.4.1</option>
+                    <option>10.0.4.2</option>
+                  </select>
+        </div>
+        <div class="col-md-6">
+            <label> HW Platform</label>
+            
+                <select class="form-select" id = "hwPlatform"
+                [(ngModel)] = "serviceRequest.hwPlatform" name = "hwPlatform" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Bumblebee</option>
+                    <option>Arctic Fox</option>
+                    <option>EZCare</option>
+                    <option>Procare</option>
+                    <option>G2 Deals</option>
+                  </select>
+        </div>
+        <div class="col-md-6">
+            <label> HW Configuration</label>
+            
+                <select class="form-select" id = "hwConfiguration"
+                [(ngModel)] = "serviceRequest.hwConfiguration" name = "hwConfiguration" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Default</option>
+                    <option>Advanced</option>
+                  
+                  </select>
+        </div>
+        <div class="col-md-6">
+            <label> Recipe Link</label>
+            <input type="text" class ="form-control" id = "recipeLink"
+                [(ngModel)] = "serviceRequest.recipeLink" name = "recipeLink">
+        </div>
+        </div>
+        <div class="form-group">
+            <label> Additional Instruction</label>
+            <textarea type="text" class ="form-control" id = "additionalInstruction"
+                [(ngModel)] = "serviceRequest.additionalInstruction" name = "additionalInstruction" rows="3"></textarea>
+        </div>
+        <div>
+            
+        </div>
+    </div>
+    <div class="col-md-12 text-center">
+
+        <button class = "btn btn-success" type="cancel" routerLink="/serviceRequests">Cancel</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+       
+    
+        <!-- <button class = "btn btn-success" type ="save" routerLink="/create-servicereq">Save</button> -->
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </div>
+    </form>
+
+  
+    
+</div>
+
+
+   
+
+    
+
+   

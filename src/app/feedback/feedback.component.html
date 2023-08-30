@@ -1,0 +1,45 @@
+
+
+<div class="col-md-9 offset-md-1"  >
+    <h2> Feedback Form </h2>
+    
+    <form  (ngSubmit) = "onSubmit()" >
+    <div class="row g-3 needs-validation" >
+        <div class="col-md-6">
+            <label>First Name</label>
+            <input type="text" class ="form-control" id = "firstName"
+                [(ngModel)] = "feedback.firstName" name = "firstName" required>
+              
+        </div>
+        <div class="col-md-6">
+            <label>Last Name</label>
+            <input type="text" class ="form-control" id = "lastName"
+                [(ngModel)] = "feedback.lastName" name = "lastName" required>
+              
+        </div>
+        <div class="col-md-6">
+            <label>Phone</label>
+            <input type="text" class ="form-control" id = "phone"
+                [(ngModel)] = "feedback.phone" name = "phone" required>
+              
+        </div>
+    
+    <div class="form-group">
+        <label>Feedback</label>
+        <textarea type="text" class ="form-control" id = "feedback"
+            [(ngModel)] = "feedback.feedback" name = "feedback" rows="4"></textarea>
+          
+    </div>
+    <div class="col-md-12 text-center">
+
+        <button class = "btn btn-success" type="cancel" routerLink="/serviceRequests">Cancel</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+       
+    
+        <!-- <button class = "btn btn-success" type ="save" routerLink="/create-servicereq">Save</button> -->
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </div>
+</div>

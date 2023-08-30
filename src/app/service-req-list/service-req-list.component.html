@@ -1,0 +1,47 @@
+
+ 
+ <h2> Service Request  List</h2>
+<table class="table table-striped table-bordered table-dark">
+    <thead>
+        <tr>
+           
+            <th> Service </th>
+            <th> Priority </th>
+            <th> Title </th>
+            <th> Description </th>
+            <th> ExpectedBy </th>
+            <th> Select Service Level </th>
+            <th> OS Version </th>
+            <th> FW Version </th>
+            <th> HW Platform </th>
+            <th> HW Configuration </th>
+            <th> Recipe Link </th>
+            <th> Additional Instruction </th>
+            <th>Actions</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let serviceRequest of serviceRequests" >
+           
+            <td> {{serviceRequest.service }} </td>
+            <td> {{serviceRequest.priority }} </td>
+            <td> {{serviceRequest.title }} </td>
+            <td> {{serviceRequest.description }} </td>
+            <td> {{serviceRequest.expectedBy }} </td>
+            <td> {{serviceRequest.selectServiceLevel }} </td>
+            <td> {{serviceRequest.osVersion }} </td>
+            <td> {{serviceRequest.fwVersion }} </td>
+            <td> {{serviceRequest.hwPlatform}} </td>
+            <td> {{serviceRequest.hwConfiguration }} </td>
+            <td> {{serviceRequest.recipeLink }} </td>
+            <td> {{serviceRequest.additionalInstruction }} </td>
+           <td>
+               <button (click)="updateServiceReq(serviceRequest.serviceId)" class="btn btn-info">Update</button>
+           </td>
+            
+        </tr>
+    </tbody>
+</table> 
+  
+
